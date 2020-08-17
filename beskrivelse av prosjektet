@@ -1,0 +1,23 @@
+Hva er det oppgaven skal svare på?
+
+Jeg skal lage en nettside som møter følgende krav.
+    1. Jeg skal lage et kunstverk/bilde i Canvas og i SVG
+    2. Bildet skal inneholde minst 5 elementer (firkant, runding strek osv)
+    3. Bilde skal ha en form for interaktivitet - Mouseover etc.
+    4. Siden skal ha en dokumentasjon
+    5. Det skal være mulig å vise/skjule dokumentasjonen
+    
+Krav av teknologi:
+    1. Bruk av SVG
+    2. Bruk av Canvas
+    3. Bruk av CSS-grid eller flexbox
+    4. Bruk av jQuery
+
+
+Dokumentasjon:
+Gi en beskrivelser av hvordan du har brukt CSS-grid og Flexbox-layout, forklar dine valg. 
+Gi en beskrivelse av hvordan du har brukt HTML canvas og SVG i HTML. 
+Gi en kort beskrivelse av hvordan du har brukt jQuery.
+Gi en kort beskrivelse av hvordan du har utført cross-browser testing. 
+List opp de viktigste (mest nyttige) informasjonskildene du har brukt (tutorials, websider, bøker).
+Husk å oppgi kilder hvis du gjenbruker kodesnutter. 
