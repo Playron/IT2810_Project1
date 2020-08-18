@@ -16,7 +16,7 @@ body {
 
 .grid-container1 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
     grid-auto-rows: minmax(200px, auto);
 }
 
@@ -26,14 +26,23 @@ body {
 }
 
 .site-logo h1{
-    position: relative;
-    left: 10px;
+    position: absolute;
+    top: 1.5em;
+    left: 2em;
 }
 .site-logo h2{
-    position: relative;
-    left: 70px;
+    position: absolute;
+    top: 4em;
+    left: 5em;
 }
 
+.canvas{
+    align-self: flex-end;
+}
+
+.svg{
+    align-self: flex-end;
+}
 
 .grid-container2 > div {
     background-color: gray
@@ -51,11 +60,11 @@ body {
 }
 
 .box1{
-
+    border: 4px red solid;
 }
 
 .box2{
-
+    border: 4px blue solid;
 }
 
 .box3{
