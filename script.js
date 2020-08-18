@@ -1,10 +1,6 @@
 let canvas = document.getElementById("art1");
 let ctx = canvas.getContext("2d");
 
-let squareX;
-let squareY;
-
-
 function drawSquare(start, stop, squareX, squareY){
     ctx.beginPath();
     ctx.moveTo(start,stop);
@@ -42,7 +38,7 @@ function drawCircle2(centerX, centerY, radius){
     ctx.fillStyle = "green";
     ctx.arc(centerX, centerY, radius, 0, 3, Math.PI*2);
     ctx.closePath();
-    ctx.fill()
+    ctx.fill();
 }
 
 drawCircle(250, 250, 100);
