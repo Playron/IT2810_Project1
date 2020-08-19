@@ -26,12 +26,13 @@ function drawRandomFigure(context, start, stop, x1, y1, x2, y2) {
     context.stroke();
 }
 
+
 function drawCircle(context, color, centerX, centerY, radius) {
     context.beginPath();
     context.fillStyle = color;
     context.arc(centerX, centerY, radius, 0, Math.PI * 2);
     context.closePath();
-    context.fill()
+    context.fill();
 }
 
 function drawCircle2(context, centerX, centerY, radius) {
@@ -65,11 +66,18 @@ function drawTriangle(context, color, startX, startY, x, y) {
     context.stroke();
 }
 
+function randomColorSelector(){
+    let red = Math.random() * (255 - 0);
+    let green = Math.random() * (255 - 0);
+    let blue = Math.random() * (255 - 0);
+    return ["rgb(",red,",",green,",",blue,")"].join("");
+
+}
 
 drawRectangle(ctx, "#EE4C7C", 116, 58, 116, 232);
 drawTriangle(ctx, "#45A29E", 175, 290, 58, 55);
 drawSquare(ctx, "#D79922", 200, 35, 75, 75);
-drawCircle(ctx, "#C5CBE3", 237, 200, 40);
+drawCircle(ctx, "#C5CBE3", 237, 200, 35);
 
 
 
@@ -83,3 +91,23 @@ drawSquare(ctx2, 400, 400, 100, 100);
 
 drawRandomFigure(ctx2, 100, 400, 50, 50, 75, 50);
 drawRandomFigure(ctx2, 300, 100, 522, 50, 25, 30);
+
+let circleRadius = 35;
+let rectStartX = 116;
+let rectStartY = 58;
+let rectX = 116;
+let rectY = 232;
+canvas.addEventListener('click',
+    function () {
+        drawRectangle(ctx, randomColorSelector(), rectStartX, rectStartY, rectX, rectY);
+        drawTriangle(ctx, randomColorSelector(), 175, 290, 58, 55);
+        drawSquare(ctx, randomColorSelector(), 200, 35, 75, 75);
+        drawCircle(ctx, randomColorSelector(), 237, 200, circleRadius);
+        circleRadius += 4;
+        rectStartX -= 2;
+        rectStartY += 4;
+        rectX += 2;
+        rectY += 2;
+        console.log(circleRadius);
+
+    })
