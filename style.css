@@ -55,6 +55,7 @@ header {
 }
 
 .box1 canvas {
+    background-color: #EAE7DC;
     border: 4px black solid;
 }
 
