@@ -1,6 +1,10 @@
 body {
-    margin: 0;
+    margin: auto;
     padding: 0;
+    background-color: #E3E2DF;
+    overflow-x: hidden;
+    width: 75%;
+    text-align: center;
 }
 
 
@@ -14,38 +18,27 @@ body {
 }*/
 
 
-.grid-container1 {
-    display: grid;
-    grid-template-columns: 2fr 2fr 1fr 1fr;
-    grid-auto-rows: minmax(200px, auto);
+header{
+    text-align: start;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 72px;
+    font-weight: lighter;
+    letter-spacing: 0;
+    border-bottom: 1px solid #aaa;
+    padding-left: 2rem;
 }
 
-.box4 {
-    justify-self: center;
-    align-self: flex-end;
+.artist-info{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: start;
+    padding-left: 1rem;
 }
 
-.site-logo h1{
-    position: absolute;
-    top: 1.5em;
-    left: 2em;
-}
-.site-logo h2{
-    position: absolute;
-    top: 4em;
-    left: 5em;
-}
 
-.canvas{
-    align-self: flex-end;
-}
-
-.svg{
-    align-self: flex-end;
-}
 
 .grid-container2 > div {
-    background-color: gray
+    background-color: gray;
 }
 
 .grid-container2 > div:nth-child(odd){
@@ -54,21 +47,20 @@ body {
 .grid-container2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1em;
-    justify-items: stretch;
-    grid-auto-rows: minmax(100px, auto);
+    justify-items: center;
+    grid-auto-rows: minmax(100px, auto);s
+    padding-top: 1rem;
+    max-width: 100%;
 }
 
-.box1{
-    border: 4px red solid;
+.box1 canvas{
+    border: 4px black solid;
 }
 
-.box2{
+.box1 h1{
+    text-align: center;
+}
+
+.box2 canvas{
     border: 4px blue solid;
 }
-
-.box3{
-
-
-}
-
