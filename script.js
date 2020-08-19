@@ -66,32 +66,25 @@ function drawTriangle(context, color, startX, startY, x, y) {
     context.stroke();
 }
 
-function randomColorSelector(){
+//Function that creates a random rgb color using the Math.random function.
+function randomColorSelector() {
     let red = Math.random() * (255 - 0);
     let green = Math.random() * (255 - 0);
     let blue = Math.random() * (255 - 0);
-    return ["rgb(",red,",",green,",",blue,")"].join("");
+    return ["rgb(", red, ",", green, ",", blue, ")"].join("");
 
 }
 
+//Draws the initial artpiece
 drawRectangle(ctx, "#EE4C7C", 116, 58, 116, 232);
 drawTriangle(ctx, "#45A29E", 175, 290, 58, 55);
+drawTriangle(ctx, "#8860D0", 116, 35, -50, 70);
 drawSquare(ctx, "#D79922", 200, 35, 75, 75);
 drawCircle(ctx, "#C5CBE3", 237, 200, 35);
 
 
-
-let canvas1 = document.getElementById("art2");
-let ctx2 = canvas1.getContext("2d");
-
-
-drawSquare(ctx2, 10, 10, 100, 100);
-drawSquare(ctx2, 100, 100, 12, 100);
-drawSquare(ctx2, 400, 400, 100, 100);
-
-drawRandomFigure(ctx2, 100, 400, 50, 50, 75, 50);
-drawRandomFigure(ctx2, 300, 100, 522, 50, 25, 30);
-
+//Make the canvas interactive. Simply change all color to a random color, and change size of the circle.
+//The rectangle is duplicating itself to add a color stack.
 let circleRadius = 35;
 let rectStartX = 116;
 let rectStartY = 58;
@@ -101,6 +94,7 @@ canvas.addEventListener('click',
     function () {
         drawRectangle(ctx, randomColorSelector(), rectStartX, rectStartY, rectX, rectY);
         drawTriangle(ctx, randomColorSelector(), 175, 290, 58, 55);
+        drawTriangle(ctx, randomColorSelector(), 116, 35, -50, 70);
         drawSquare(ctx, randomColorSelector(), 200, 35, 75, 75);
         drawCircle(ctx, randomColorSelector(), 237, 200, circleRadius);
         circleRadius += 4;
@@ -109,5 +103,15 @@ canvas.addEventListener('click',
         rectX += 2;
         rectY += 2;
         console.log(circleRadius);
-
+        console.log(rectStartY);
+        if (circleRadius > 95) {
+            circleRadius = 95;
+        }
+        if(rectStartY > 200){
+            rectStartY -= 30;
+            rectStartX += 80;
+        }
     })
+
+
+

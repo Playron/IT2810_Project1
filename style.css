@@ -35,17 +35,7 @@ header {
     padding-left: 1rem;
 }
 
-
-
-.grid-container2>div {
-    background-color: gray;
-}
-
-.grid-container2>div:nth-child(odd) {
-    background-color: #ddd;
-}
-
-.grid-container2 {
+.grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
@@ -64,5 +54,5 @@ header {
 }
 
 .box2 canvas {
-    border: 4px blue solid;
+    border: 4px black solid;
 }
