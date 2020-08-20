@@ -90,7 +90,8 @@ let rectStartX = 116;
 let rectStartY = 58;
 let rectX = 116;
 let rectY = 232;
-canvas.addEventListener('click',
+
+/*canvas.addEventListener('click',
     function () {
         drawRectangle(ctx, randomColorSelector(), rectStartX, rectStartY, rectX, rectY);
         drawTriangle(ctx, randomColorSelector(), 175, 290, 58, 55);
@@ -111,7 +112,31 @@ canvas.addEventListener('click',
             rectStartY -= 30;
             rectStartX += 80;
         }
-    })
+    });*/
 
 
 
+$(document).ready(function () {
+
+    $('#art1').on('click', function () {
+        drawRectangle(ctx, randomColorSelector(), rectStartX, rectStartY, rectX, rectY);
+        drawTriangle(ctx, randomColorSelector(), 175, 290, 58, 55);
+        drawTriangle(ctx, randomColorSelector(), 116, 35, -50, 70);
+        drawSquare(ctx, randomColorSelector(), 200, 35, 75, 75);
+        drawCircle(ctx, randomColorSelector(), 237, 200, circleRadius);
+        circleRadius += 4;
+        rectStartX -= 2;
+        rectStartY += 4;
+        rectX += 2;
+        rectY += 2;
+        console.log(circleRadius);
+        console.log(rectStartY);
+        if (circleRadius >= 95) {
+            circleRadius = 95;
+        }
+        if (rectStartY >= 100) {
+            rectStartY -= 30;
+            rectStartX += 80;
+        }
+    });
+});

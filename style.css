@@ -24,6 +24,11 @@
         padding-left: 1rem;
     }
 
+    .box1 canvas {
+        background-color: #EAE7DC;
+        border: 4px black solid;
+    }
+
     #art2 {
         border: 4px black solid;
     }
