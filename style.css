@@ -29,6 +29,11 @@
         border: 4px black solid;
     }
 
+    .box1{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 12px;
+    }
+
     #art2 {
         border: 4px black solid;
     }

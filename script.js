@@ -117,7 +117,6 @@ let rectY = 232;
 
 
 $(document).ready(function () {
-
     $('#art1').on('click', function () {
         drawRectangle(ctx, randomColorSelector(), rectStartX, rectStartY, rectX, rectY);
         drawTriangle(ctx, randomColorSelector(), 175, 290, 58, 55);
