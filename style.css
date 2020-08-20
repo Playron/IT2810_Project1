@@ -1,14 +1,47 @@
-body {
-    margin: auto;
-    padding: 0;
-    background-color: #E3E2DF;
-    overflow-x: hidden;
-    width: 75%;
-    text-align: center;
-}
+    body {
+        margin: auto;
+        padding: 0;
+        background-color: #E3E2DF;
+        overflow-x: hidden;
+        width: 75%;
+        text-align: center;
+    }
+
+    header {
+        text-align: start;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 72px;
+        font-weight: lighter;
+        letter-spacing: 0;
+        border-bottom: 1px solid #aaa;
+        padding-left: 2rem;
+    }
+
+    .artist-info {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        text-align: start;
+        padding-left: 1rem;
+    }
+
+    #art2 {
+        border: 4px black solid;
+    }
 
 
-/*canvas {
+
+    @media only screen and (min-width: 950px) {
+        body {
+            margin: auto;
+            padding: 0;
+            background-color: #E3E2DF;
+            overflow-x: hidden;
+            width: 75%;
+            text-align: center;
+        }
+
+
+        /*canvas {
     padding-left: 0;
     padding-right: 0;
     margin-left: auto;
@@ -18,41 +51,42 @@ body {
 }*/
 
 
-header {
-    text-align: start;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 72px;
-    font-weight: lighter;
-    letter-spacing: 0;
-    border-bottom: 1px solid #aaa;
-    padding-left: 2rem;
-}
+        header {
+            text-align: start;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 72px;
+            font-weight: lighter;
+            letter-spacing: 0;
+            border-bottom: 1px solid #aaa;
+            padding-left: 2rem;
+        }
 
-.artist-info {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    text-align: start;
-    padding-left: 1rem;
-}
+        .artist-info {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            text-align: start;
+            padding-left: 1rem;
+        }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    grid-auto-rows: minmax(100px, auto);
-    padding-top: 1rem;
-    max-width: 100%;
-}
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+            grid-auto-rows: minmax(100px, auto);
+            padding-top: 1rem;
+            max-width: 100%;
+        }
 
-.box1 canvas {
-    background-color: #EAE7DC;
-    border: 4px black solid;
-}
+        .box1 canvas {
+            background-color: #EAE7DC;
+            border: 4px black solid;
+        }
 
-.box1 h1 {
-    text-align: center;
-}
+        .box1 h1 {
+            text-align: center;
+        }
 
-.box2 canvas {
-    border: 4px black solid;
-}
+        .box2 canvas {
+            border: 4px black solid;
+        }
+    }
