@@ -107,7 +107,7 @@ canvas.addEventListener('click',
         if (circleRadius > 95) {
             circleRadius = 95;
         }
-        if(rectStartY > 200){
+        if(rectStartY > 100){
             rectStartY -= 30;
             rectStartX += 80;
         }
