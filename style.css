@@ -34,7 +34,7 @@
         font-size: 12px;
     }
 
-    #art2 {
+    .box2 svg {
         border: 4px black solid;
     }
 
@@ -96,7 +96,7 @@
             text-align: center;
         }
 
-        .box2 canvas {
+        .box2 svg {
             border: 4px black solid;
         }
     }
