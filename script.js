@@ -10,6 +10,7 @@ function drawSquare(context, color, start, stop, squareX, squareY) {
     context.lineTo(start, stop);
     context.fillStyle = color;
     context.fill();
+    context.closePath();
     context.stroke();
 }
 
@@ -35,9 +36,9 @@ function drawCircle(context, color, centerX, centerY, radius) {
     context.fill();
 }
 
-function drawCircle2(context, centerX, centerY, radius) {
+function drawCircle2(context, color, centerX, centerY, radius) {
     context.beginPath();
-    context.fillStyle = "green";
+    context.fillStyle = color;
     context.arc(centerX, centerY, radius, 0, 3, Math.PI * 2);
     context.closePath();
     context.fill();
@@ -66,6 +67,18 @@ function drawTriangle(context, color, startX, startY, x, y) {
     context.stroke();
 }
 
+function drawArc(context, color, startX, startY, radius) {
+    context.beginPath();
+    context.arc(startX, startY, 70, 0, Math.PI, false);
+    context.moveTo(startX + 70, startY);
+    context.ellipse(startX, startY, 70, 35, 0, 0, Math.PI);
+    //context.closePath();
+    context.fillStyle = color;
+    //context.fill();
+    context.stroke();
+
+}
+
 //Function that creates a random rgb color using the Math.random function.
 function randomColorSelector() {
     let red = Math.random() * (255 - 0);
@@ -81,6 +94,8 @@ drawTriangle(ctx, "#45A29E", 175, 290, 58, 55);
 drawTriangle(ctx, "#8860D0", 116, 35, -50, 70);
 drawSquare(ctx, "#D79922", 200, 35, 75, 75);
 drawCircle(ctx, "#C5CBE3", 237, 200, 35);
+drawCircle(ctx, "#41B3A3", 100, 200, 50);
+//drawArc(ctx,"blue", 175, 220);
 
 
 //Make the canvas interactive. Simply change all color to a random color, and change size of the circle.
@@ -90,7 +105,8 @@ let rectStartX = 116;
 let rectStartY = 58;
 let rectX = 116;
 let rectY = 232;
-canvas.addEventListener('click',
+
+/*canvas.addEventListener('click',
     function () {
         drawRectangle(ctx, randomColorSelector(), rectStartX, rectStartY, rectX, rectY);
         drawTriangle(ctx, randomColorSelector(), 175, 290, 58, 55);
@@ -107,11 +123,48 @@ canvas.addEventListener('click',
         if (circleRadius > 95) {
             circleRadius = 95;
         }
-        if(rectStartY > 200){
+        if(rectStartY > 100){
             rectStartY -= 30;
             rectStartX += 80;
         }
-    })
+    });*/
 
 
 
+$(document).ready(function () {
+    $('#art1').on('click', function () {
+        drawRectangle(ctx, randomColorSelector(), rectStartX, rectStartY, rectX, rectY);
+        drawTriangle(ctx, randomColorSelector(), 175, 290, 58, 55);
+        drawTriangle(ctx, randomColorSelector(), 116, 35, -50, 70);
+        drawSquare(ctx, randomColorSelector(), 200, 35, 75, 75);
+        drawCircle(ctx, randomColorSelector(), 237, 200, circleRadius);
+        drawCircle(ctx, randomColorSelector(), 100, 200, 50);
+        //drawArc(ctx,"blue", 175, 220);
+        circleRadius += 4;
+        rectStartX -= 2;
+        rectStartY += 4;
+        rectX += 2;
+        rectY += 2;
+        console.log(circleRadius);
+        console.log(rectStartY);
+        if (circleRadius >= 95) {
+            circleRadius = 95;
+        }
+        if (rectStartY >= 100) {
+            rectStartY -= 30;
+            rectStartX += 80;
+        }
+    });
+});
+
+$(document).ready(function () {
+    $('#svg-art').on('click', function () {
+        $svg = $("#svg-art");
+        $("#svg-rect", $svg).attr('style', "fill:"+randomColorSelector());
+        $("#triangle1", $svg).attr('style', "fill:"+randomColorSelector());
+        $("#triangle2", $svg).attr('style', "fill:"+randomColorSelector());
+        $("#square", $svg).attr('style', "fill:"+randomColorSelector());
+        $("#circle1", $svg).attr('style', "fill:"+randomColorSelector());
+        $("#circl2", $svg).attr('style', "fill:"+randomColorSelector());
+    });
+});

@@ -5,33 +5,52 @@
     <title>Prosjekt 1</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
 </head>
 
 <body>
     <div class="content">
         <header>
             <div class="artist-name">
-                DJ SOUR SCUM
+                Dalidor Salva vs. Salvador Dali
             </div>
         </header>
 
         <div class="artist-info">
-            <p>The infamus artist DJ Sour Scum represents a new masterpiece made explicit using canvas and svg. Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Illum quaerat eius veritatis cumque possimus? Dolor
-                perspiciatis corporis labore. Exercitationem dolor quas distinctio nostrum tenetur nihil inventore
-                voluptate minus dolores ullam?</p>
+            <p>Ser du de to helt nydelige abstrakte kunstverkene nedenfor? De ser kanskje helt identiske ut, men i
+                virkeligheten skjuler begge noen hemmelige egenskaper. De to verdenskjente kunsterene Dalidor Salva og
+                Salvador Dali kjempet på 1950-tallet om hvem som kunne lage de beste interaktive abstrakte kunsverkene.
+                Lite visste selveste Dali at Salva hadde overvunnet kontrollen over Canvas-rammeverket. Javascriptkoden
+                bare fløt som krem, og interaksjonene er spektakulære. Trykk på hver av bildene da, og se hva som skjer!
+            </p>
         </div>
 
         <div class="grid-container">
             <div class="box box1">
-                <canvas id="art1" width="350" height="350"></canvas>
-                <h1>The bermuda squarangle</h1>
+                <canvas id="art1" width="350" height="350">Your browser does not support Canvas</canvas>
+            </div>
+            <div class="canvas-text">
+                <h3>THE BERMUDA SQUAREANGLE</h3>
+                <h4>- Dalidor Salva</h4>
+            </div>
+            <div class="svg-text">
+                <h3>THE HIDDEN SVG GEM</h3>
+                <h4>- Salvador Dali</h4>
             </div>
             <div class="box box2">
-                <canvas id="art2" width="350" height="350"></canvas>
+                <svg id="svg-art" width="350" height="350">
+                    <rect id="svg-rect" x="116" y="58" , width="116" height="232"></rect>
+                    <polygon id="triangle1" points="116,35 66,105 166,105" />
+                    <polygon id="triangle2" points="175,290 117,345 233,345" />
+                    <polygon id="square" points="290,35 290,110 215,110 215, 35" />
+                    <circle id="circle1" cx="237" cy="200" r="35" />
+                    <circle id="circle2" cx="100" cy="200" r="50" />
+                </svg>
             </div>
         </div>
     </div>
+
+
     <script src="script.js"></script>
 </body>
 
