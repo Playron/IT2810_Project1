@@ -67,10 +67,10 @@ function drawTriangle(context, color, startX, startY, x, y) {
     context.stroke();
 }
 
-function drawArc(context, color, startX, startY, radius){
+function drawArc(context, color, startX, startY, radius) {
     context.beginPath();
     context.arc(startX, startY, 70, 0, Math.PI, false);
-    context.moveTo(startX+70, startY);
+    context.moveTo(startX + 70, startY);
     context.ellipse(startX, startY, 70, 35, 0, 0, Math.PI);
     //context.closePath();
     context.fillStyle = color;
@@ -94,8 +94,8 @@ drawTriangle(ctx, "#45A29E", 175, 290, 58, 55);
 drawTriangle(ctx, "#8860D0", 116, 35, -50, 70);
 drawSquare(ctx, "#D79922", 200, 35, 75, 75);
 drawCircle(ctx, "#C5CBE3", 237, 200, 35);
-drawCircle2(ctx, "#41B3A3", 100 , 200, 50);
-drawArc(ctx,"blue", 175, 220);
+drawCircle(ctx, "#41B3A3", 100, 200, 50);
+//drawArc(ctx,"blue", 175, 220);
 
 
 //Make the canvas interactive. Simply change all color to a random color, and change size of the circle.
@@ -138,8 +138,8 @@ $(document).ready(function () {
         drawTriangle(ctx, randomColorSelector(), 116, 35, -50, 70);
         drawSquare(ctx, randomColorSelector(), 200, 35, 75, 75);
         drawCircle(ctx, randomColorSelector(), 237, 200, circleRadius);
-        drawCircle2(ctx, randomColorSelector(), 100 , 200, 50);
-        drawArc(ctx,"blue", 175, 220);
+        drawCircle(ctx, randomColorSelector(), 100, 200, 50);
+        //drawArc(ctx,"blue", 175, 220);
         circleRadius += 4;
         rectStartX -= 2;
         rectStartY += 4;
@@ -157,3 +157,14 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    $('#svg-art').on('click', function () {
+        $svg = $("#svg-art");
+        $("#svg-rect", $svg).attr('style', "fill:"+randomColorSelector());
+        $("#triangle1", $svg).attr('style', "fill:"+randomColorSelector());
+        $("#triangle2", $svg).attr('style', "fill:"+randomColorSelector());
+        $("#square", $svg).attr('style', "fill:"+randomColorSelector());
+        $("#circle1", $svg).attr('style', "fill:"+randomColorSelector());
+        $("#circl2", $svg).attr('style', "fill:"+randomColorSelector());
+    });
+});

@@ -3,7 +3,7 @@
         padding: 0;
         background-color: #E3E2DF;
         overflow-x: hidden;
-        width: 75%;
+        width: 80%;
         text-align: center;
     }
 
@@ -29,20 +29,81 @@
         border: 4px black solid;
     }
 
-    .box1{
+    .box1 {
         font-family: 'Courier New', Courier, monospace;
         font-size: 12px;
     }
+
     .box2 {
         font-family: 'Courier New', Courier, monospace;
         font-size: 12px;
     }
+
     .box2 svg {
         border: 4px black solid;
     }
 
-    #svg-rect{
+    #svg-rect {
         fill: #EE4C7C;
+    }
+
+    #svg-rect {
+        fill: #EE4C7C;
+    }
+
+    #triangle1 {
+        fill: #8860D0;
+        stroke: black;
+        stroke-width: 1px;
+    }
+
+    #triangle2 {
+        fill: #45A29E;
+        stroke: black;
+        stroke-width: 1px;
+    }
+
+    #square {
+        fill: #D79922;
+        stroke: black;
+        stroke-width: 1px;
+    }
+
+    #circle1 {
+        fill: #C5CBE3;
+    }
+
+    #circle2 {
+        fill: #41B3A3;
+    }
+
+    #svg-rect {
+        stroke: black;
+        stroke-width: 1px;
+    }
+
+
+    .canvas-text {
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .canvas-text h4 {
+        padding-left: 0px;
+    }
+
+
+    .svg-text {
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        justify-self: end;
+        align-self: center;
+    }
+
+    .svg-text h4 {
+        padding-left: 0px;
+        
     }
 
 
@@ -53,20 +114,9 @@
             padding: 0;
             background-color: #E3E2DF;
             overflow-x: hidden;
-            width: 75%;
+            width: 70%;
             text-align: center;
         }
-
-
-        /*canvas {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 500px;
-}*/
-
 
         header {
             text-align: start;
@@ -87,11 +137,12 @@
 
         .grid-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            justify-items: center;
+            grid-template-columns: 2fr 1fr;
+            justify-items: stretch;
             grid-auto-rows: minmax(100px, auto);
             padding-top: 1rem;
             max-width: 100%;
+            gap: 30px;
         }
 
         .box1 canvas {
@@ -99,31 +150,78 @@
             border: 4px black solid;
         }
 
+        .canvas-text {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            justify-self: start;
+            justify-items: center;
+            align-self: center;
+        }
+
+        .canvas-text h4 {
+            padding-left: 0px;
+        }
+
+
+        .svg-text {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            justify-self: center;
+            align-self: center;
+            justify-items: end;
+        }
+
+        .svg-text h4 {
+            padding-left: 0px;
+        }
+
         .box1 h1 {
             text-align: center;
+        }
+
+        .box2 {
+            grid-column: 2/3;
+        }
+
+        .svg-text {
+            grid-column: 1/2;
         }
 
         .box2 svg {
             border: 4px black solid;
         }
 
-        #svg-rect{
+        #svg-rect {
             fill: #EE4C7C;
         }
 
-        #triangle1{
+        #triangle1 {
             fill: #8860D0;
             stroke: black;
             stroke-width: 1px;
         }
-        #triangle2{
+
+        #triangle2 {
             fill: #45A29E;
             stroke: black;
             stroke-width: 1px;
         }
 
-        #square{
+        #square {
             fill: #D79922;
+            stroke: black;
+            stroke-width: 1px;
+        }
+
+        #circle1 {
+            fill: #C5CBE3;
+        }
+
+        #circle2 {
+            fill: #41B3A3;
+        }
+
+        #svg-rect {
             stroke: black;
             stroke-width: 1px;
         }
