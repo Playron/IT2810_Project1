@@ -33,9 +33,16 @@
         font-family: 'Courier New', Courier, monospace;
         font-size: 12px;
     }
-
+    .box2 {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 12px;
+    }
     .box2 svg {
         border: 4px black solid;
+    }
+
+    #svg-rect{
+        fill: #EE4C7C;
     }
 
 
@@ -98,5 +105,26 @@
 
         .box2 svg {
             border: 4px black solid;
+        }
+
+        #svg-rect{
+            fill: #EE4C7C;
+        }
+
+        #triangle1{
+            fill: #8860D0;
+            stroke: black;
+            stroke-width: 1px;
+        }
+        #triangle2{
+            fill: #45A29E;
+            stroke: black;
+            stroke-width: 1px;
+        }
+
+        #square{
+            fill: #D79922;
+            stroke: black;
+            stroke-width: 1px;
         }
     }
