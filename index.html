@@ -17,11 +17,11 @@
         </header>
 
         <div class="artist-info">
-            <p>Ser du de to helt nydelige abstrakte kunstverkene nedenfor? De ser kanskje helt identiske ut, men i
-                virkeligheten skjuler begge noen hemmelige egenskaper. De to verdenskjente kunsterene Dalidor Salva og
-                Salvador Dali kjempet på 1950-tallet om hvem som kunne lage de beste interaktive abstrakte kunsverkene.
+            <p>Ser du de to helt nydelige, abstrakte kunstverkene nedenfor? De ser kanskje helt identiske ut, men i
+                virkeligheten skjuler begge store hemmelige egenskaper. De to verdenskjente kunsterene Dalidor Salva og
+                Salvador Dali kjempet på 1950-tallet om hvem som kunne lage de beste interaktive, abstrakte kunsverkene.
                 Lite visste selveste Dali at Salva hadde overvunnet kontrollen over Canvas-rammeverket. Javascriptkoden
-                bare fløt som krem, og interaksjonene er spektakulære. Trykk på hver av bildene da, og se hva som skjer!
+                fløt som krem og interaksjonene er spektakulære. Trykk på et av bildene da, og se hva som skjer!
             </p>
         </div>
         <div class="grid-container">
@@ -38,7 +38,7 @@
             </div>
             <div class="box box2">
                 <svg id="svg-art" width="350" height="350">
-                    <rect id="svg-rect" x="116" y="58" , width="116" height="232"></rect>
+                    <rect id="svg-rect" x="116" y="58" width="116" height="232"></rect>
                     <polygon id="triangle1" points="116,35 66,105 166,105" />
                     <polygon id="triangle2" points="175,290 117,345 233,345" />
                     <polygon id="square" points="290,35 290,110 215,110 215, 35" />
@@ -57,16 +57,19 @@
                     <p>Det er klart at når en designer en nettside, så er det viktig at layouten
                         på siden blir oversiktlig og brukervennlig. Grid og flexbox er to metoder som hjelper brukeren å
                         plassere nettside elementene på nettsiden. Disse metodene går bort i fra standard
-                        CSS-positioning,
-                        og setter heller opp ett rutenett hvor du kan plassere elementer. I utgangspunktet er grid best
+                        CSS-posisjonering,
+                        og setter heller opp ett rutenett hvor du kan plassere elementer fritt. I utgangspunktet er grid
+                        best
                         for
-                        todimensjonal layering, mens flexbox til endimensjonal layering. Til tross for at nettsiden bare
+                        todimensjonal layering, mens flexbox til endimensjonal layering. Til tross for at nettsiden min
+                        bare
                         skal designes i en dimensjon, benyttet jeg grid. Dette var fordi jeg har brukt grid tidligere,
                         og
                         fordi hvis jeg eventuelt ønsket å gjøre endringer i layout, tilbød grid flere muligheter. Alle
                         elementene på siden er wrappet inn i en div kalt content. Inne i content har jeg en
                         grid-container. Inne i denne containeren legger jeg til alle elementene jeg ønsker å posisjonere
-                        med css gridfunskjoner. Hvis jeg skulle ønske å bygge på siden senere og teste ut forskjellige
+                        med css gridfunskjoner. Disse er slik at en rute er 2/3 av skjernen, mens andre ruta er 1/3 av
+                        skjermen. Hvis jeg skulle ønske å bygge på siden senere og teste ut forskjellige
                         layouts, gjør bruken av grid dette overkommelig.</p>
                 </div>
                 <div id="show-more">
@@ -75,7 +78,8 @@
                         tegner på nettsidene, er det store forskjeller mellom dem. SVG er en deklarativ, og kan skrives
                         rett inn i HTML dokumentet i en svg-tag. SVG er også vektorbasert og er på grunn av dette
                         veldig bra å bruke til statiske bilder som logoer og ikoner. På min nettside har jeg
-                        definert alle svg elementene alene med en ID, slik at jeg kan manipulere dem med CSS. Canvas
+                        definert alle svg elementene alene med en ID, slik at jeg kan manipulere dem med CSS og
+                        Javascript. Canvas
                         er derimot et Javaskrift tegne API, og her må en programmere hvordan grafikken skal være ved
                         hjelp av Javascript. Dette er kanskje noe mer tidkrevende å sette opp, men gir også mange
                         flere muligheter, som for eksempel interaksjon. På min nettside har jeg laget
@@ -86,23 +90,27 @@
                         koordinater.</p>
                     <h3>JQuery</h3>
                     <p>På min nettside har jeg for det meste bennyttet meg av JQuery i de sammengengene jeg vil at noe
-                        skal skje for eksempel når en bruker trykker på en knapp. For eksempel i oppgaven hvor jeg
+                        skal skje for eksempel når en bruker trykker på en knapp. JQuery er et Javascript bibliotek, som
+                        gjør HTML dokumenttraversering, event handling, animasjoner mm. enklere. For eksempel i oppgaven
+                        hvor jeg
                         skulle ha en knapp som viste mer eller mindre tekst, har JQuery enkle funskjoner som kan utnytte
-                        dette. Her kan en bruke funskjonene show() og hide() som forenkler dette problemet betraktelig.
-                        Ellers har jeg JQuery for å koble handlinger til knapper etc.</p>
+                        dette. Ved å sette opp to div-er, og bruke funskjonene show() og hide() for å vise og skjule
+                        elementer, løste nesten denne oppgaven seg selv.
+                        JQuery ble også brukt ved å gjøre mesterverkene ovenfor interaktive. Her ble det i utgangaspunkt
+                        brukt til å finne sideelementene, for så å manipulere dem.</p>
                     <h3>Cross browser testing</h3>
                     <p>Når jeg utførte brukertest på forskjellige browsere benyttet jeg med av nettleserne Safari,
                         Chrome og Firefox. Samtlige av disse nettleserne klarte å laste alle elementene på nettsiden
                         helt i orden. Testingen ble gjennomført kontinuerlig under utviklingsprosessen. Når jeg hadde
                         implementert ny funksjonalitet sjekket jeg ut om jeg fikk ønsker resultat fra alle nettleserne.
                         Heretter kunne jeg utvikle ytterligere for så å teste på nytt.</p>
-
                     <h3>Informasjonskilder</h3>
                     <p>Her vil jeg liste de forskjellige resursene jeg brukte for å finne informasjon om de forskjellige
                         teknologiene.
                         <br>
                         <br>
-                        JQuery - <a href="https://www.tutorialspoint.com/jquery/jquery-quick-guide.htm">ToturialsPoint</a>
+                        JQuery - <a
+                            href="https://www.tutorialspoint.com/jquery/jquery-quick-guide.htm">ToturialsPoint</a>
                         <br>
                         <br>
                         SVG - <a href="https://www.w3schools.com/graphics/svg_intro.asp">W3Schools</a>
@@ -111,7 +119,8 @@
                         Grid - <a href="https://www.youtube.com/watch?v=jV8B24rSN5o">Traversy Media @ Youtube</a>
                         <br>
                         <br>
-                        JQuery - <a href="https://www.tutorialspoint.com/jquery/jquery-quick-guide.htm">ToturialsPoint</a>
+                        JQuery - <a
+                            href="https://www.tutorialspoint.com/jquery/jquery-quick-guide.htm">ToturialsPoint</a>
                         <br>
                         <br>
                     </p>
