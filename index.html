@@ -24,7 +24,6 @@
                 bare fløt som krem, og interaksjonene er spektakulære. Trykk på hver av bildene da, og se hva som skjer!
             </p>
         </div>
-
         <div class="grid-container">
             <div class="box box1">
                 <canvas id="art1" width="350" height="350">Your browser does not support Canvas</canvas>
@@ -48,9 +47,79 @@
                 </svg>
             </div>
         </div>
+        <div class="documentation-grid">
+            <div class="headline">
+                <h1>Dokumentasjon:</h1>
+            </div>
+            <div class="dokumentasjon">
+                <div id="show-less">
+                    <h3>Grid vs flexbox</h3>
+                    <p>Det er klart at når en designer en nettside, så er det viktig at layouten
+                        på siden blir oversiktlig og brukervennlig. Grid og flexbox er to metoder som hjelper brukeren å
+                        plassere nettside elementene på nettsiden. Disse metodene går bort i fra standard
+                        CSS-positioning,
+                        og setter heller opp ett rutenett hvor du kan plassere elementer. I utgangspunktet er grid best
+                        for
+                        todimensjonal layering, mens flexbox til endimensjonal layering. Til tross for at nettsiden bare
+                        skal designes i en dimensjon, benyttet jeg grid. Dette var fordi jeg har brukt grid tidligere,
+                        og
+                        fordi hvis jeg eventuelt ønsket å gjøre endringer i layout, tilbød grid flere muligheter. Alle
+                        elementene på siden er wrappet inn i en div kalt content. Inne i content har jeg en
+                        grid-container. Inne i denne containeren legger jeg til alle elementene jeg ønsker å posisjonere
+                        med css gridfunskjoner. Hvis jeg skulle ønske å bygge på siden senere og teste ut forskjellige
+                        layouts, gjør bruken av grid dette overkommelig.</p>
+                </div>
+                <div id="show-more">
+                    <h3>Canvas og SVG</h3>
+                    <p>Canvas og SVG er begge teknologier som gjør at en kan tegne grafikk i nettlesere. Selv om begge
+                        tegner på nettsidene, er det store forskjeller mellom dem. SVG er en deklarativ, og kan skrives
+                        rett inn i HTML dokumentet i en svg-tag. SVG er også vektorbasert og er på grunn av dette
+                        veldig bra å bruke til statiske bilder som logoer og ikoner. På min nettside har jeg
+                        definert alle svg elementene alene med en ID, slik at jeg kan manipulere dem med CSS. Canvas
+                        er derimot et Javaskrift tegne API, og her må en programmere hvordan grafikken skal være ved
+                        hjelp av Javascript. Dette er kanskje noe mer tidkrevende å sette opp, men gir også mange
+                        flere muligheter, som for eksempel interaksjon. På min nettside har jeg laget
+                        standardfunksjoner som tegner forskjellige figurer i min canvas. Dette er funksjoner som
+                        drawSquare() og drawTriangle(). Ved å ha slike funksjoner kan jeg enkelt gjøre enkel
+                        interaksjon med bildene. Ved klikk innenfor canvas-vinduet vil alle figurene bytte til en
+                        tilfeldig farge, og enkelte figurer vil forstørres, mens andre blir tegnet på nytt med nye
+                        koordinater.</p>
+                    <h3>JQuery</h3>
+                    <p>På min nettside har jeg for det meste bennyttet meg av JQuery i de sammengengene jeg vil at noe
+                        skal skje for eksempel når en bruker trykker på en knapp. For eksempel i oppgaven hvor jeg
+                        skulle ha en knapp som viste mer eller mindre tekst, har JQuery enkle funskjoner som kan utnytte
+                        dette. Her kan en bruke funskjonene show() og hide() som forenkler dette problemet betraktelig.
+                        Ellers har jeg JQuery for å koble handlinger til knapper etc.</p>
+                    <h3>Cross browser testing</h3>
+                    <p>Når jeg utførte brukertest på forskjellige browsere benyttet jeg med av nettleserne Safari,
+                        Chrome og Firefox. Samtlige av disse nettleserne klarte å laste alle elementene på nettsiden
+                        helt i orden. Testingen ble gjennomført kontinuerlig under utviklingsprosessen. Når jeg hadde
+                        implementert ny funksjonalitet sjekket jeg ut om jeg fikk ønsker resultat fra alle nettleserne.
+                        Heretter kunne jeg utvikle ytterligere for så å teste på nytt.</p>
+
+                    <h3>Informasjonskilder</h3>
+                    <p>Her vil jeg liste de forskjellige resursene jeg brukte for å finne informasjon om de forskjellige
+                        teknologiene.
+                        <br>
+                        <br>
+                        JQuery - <a href="https://www.tutorialspoint.com/jquery/jquery-quick-guide.htm">ToturialsPoint</a>
+                        <br>
+                        <br>
+                        SVG - <a href="https://www.w3schools.com/graphics/svg_intro.asp">W3Schools</a>
+                        <br>
+                        <br>
+                        Grid - <a href="https://www.youtube.com/watch?v=jV8B24rSN5o">Traversy Media @ Youtube</a>
+                        <br>
+                        <br>
+                        JQuery - <a href="https://www.tutorialspoint.com/jquery/jquery-quick-guide.htm">ToturialsPoint</a>
+                        <br>
+                        <br>
+                    </p>
+                </div>
+                <button id="btn1" class="btn">Show more</button>
+            </div>
+        </div>
     </div>
-
-
     <script src="script.js"></script>
 </body>
 

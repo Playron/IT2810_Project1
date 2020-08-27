@@ -56,6 +56,9 @@ function drawRectangle(context, color, start, stop, x, y) {
     context.stroke();
 }
 
+let startX = 116;
+let startY = 35;
+
 function drawTriangle(context, color, startX, startY, x, y) {
     context.beginPath();
     context.moveTo(startX, startY);
@@ -106,36 +109,12 @@ let rectStartY = 58;
 let rectX = 116;
 let rectY = 232;
 
-/*canvas.addEventListener('click',
-    function () {
-        drawRectangle(ctx, randomColorSelector(), rectStartX, rectStartY, rectX, rectY);
-        drawTriangle(ctx, randomColorSelector(), 175, 290, 58, 55);
-        drawTriangle(ctx, randomColorSelector(), 116, 35, -50, 70);
-        drawSquare(ctx, randomColorSelector(), 200, 35, 75, 75);
-        drawCircle(ctx, randomColorSelector(), 237, 200, circleRadius);
-        circleRadius += 4;
-        rectStartX -= 2;
-        rectStartY += 4;
-        rectX += 2;
-        rectY += 2;
-        console.log(circleRadius);
-        console.log(rectStartY);
-        if (circleRadius > 95) {
-            circleRadius = 95;
-        }
-        if(rectStartY > 100){
-            rectStartY -= 30;
-            rectStartX += 80;
-        }
-    });*/
-
-
 
 $(document).ready(function () {
     $('#art1').on('click', function () {
         drawRectangle(ctx, randomColorSelector(), rectStartX, rectStartY, rectX, rectY);
         drawTriangle(ctx, randomColorSelector(), 175, 290, 58, 55);
-        drawTriangle(ctx, randomColorSelector(), 116, 35, -50, 70);
+        drawTriangle(ctx, randomColorSelector(), startX, startY, -50, 70);
         drawSquare(ctx, randomColorSelector(), 200, 35, 75, 75);
         drawCircle(ctx, randomColorSelector(), 237, 200, circleRadius);
         drawCircle(ctx, randomColorSelector(), 100, 200, 50);
@@ -145,6 +124,8 @@ $(document).ready(function () {
         rectStartY += 4;
         rectX += 2;
         rectY += 2;
+        startX += 2;
+        startY += 2;
         console.log(circleRadius);
         console.log(rectStartY);
         if (circleRadius >= 95) {
@@ -160,11 +141,30 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('#svg-art').on('click', function () {
         $svg = $("#svg-art");
-        $("#svg-rect", $svg).attr('style', "fill:"+randomColorSelector());
-        $("#triangle1", $svg).attr('style', "fill:"+randomColorSelector());
-        $("#triangle2", $svg).attr('style', "fill:"+randomColorSelector());
-        $("#square", $svg).attr('style', "fill:"+randomColorSelector());
-        $("#circle1", $svg).attr('style', "fill:"+randomColorSelector());
-        $("#circl2", $svg).attr('style', "fill:"+randomColorSelector());
+        $("#svg-rect", $svg).attr('style', "fill:" + randomColorSelector());
+        $("#triangle1", $svg).attr('style', "fill:" + randomColorSelector());
+        $("#triangle2", $svg).attr('style', "fill:" + randomColorSelector());
+        $("#square", $svg).attr('style', "fill:" + randomColorSelector());
+        $("#circle1", $svg).attr('style', "fill:" + randomColorSelector());
+        $("#circl2", $svg).attr('style', "fill:" + randomColorSelector());
+    });
+});
+
+
+
+show = "less";
+$(document).ready(function () {
+    $("#show-more").hide();
+    $('.btn').on("click", function () {
+        if (show == "less") {
+            $("#show-more").show(100);
+            show = "more"
+            $("#btn1").text("Show less");
+        }
+        else{
+            $("#show-more").hide(100);
+            show = "less";
+            $("#btn1").text("Show more");
+        }
     });
 });
