@@ -98,7 +98,6 @@ drawTriangle(ctx, "#8860D0", 116, 35, -50, 70);
 drawSquare(ctx, "#D79922", 200, 35, 75, 75);
 drawCircle(ctx, "#C5CBE3", 237, 200, 35);
 drawCircle(ctx, "#41B3A3", 100, 200, 50);
-//drawArc(ctx,"blue", 175, 220);
 
 
 //Make the canvas interactive. Simply change all color to a random color, and change size of the circle.
@@ -126,8 +125,6 @@ $(document).ready(function () {
         rectY += 2;
         startX += 2;
         startY += 2;
-        console.log(circleRadius);
-        console.log(rectStartY);
         if (circleRadius >= 95) {
             circleRadius = 95;
         }
@@ -150,18 +147,16 @@ $(document).ready(function () {
     });
 });
 
-
-
-show = "less";
+let show = "less";
 $(document).ready(function () {
     $("#show-more").hide();
     $('.btn').on("click", function () {
         if (show == "less") {
-            $("#show-more").show(100);
+            $("#show-more").show();
+            $('html, body').scrollTop($("#show-more").offset().top);
             show = "more"
             $("#btn1").text("Show less");
-        }
-        else{
+        } else {
             $("#show-more").hide(100);
             show = "less";
             $("#btn1").text("Show more");

@@ -141,7 +141,7 @@
     }
 
     .dokumentasjon button:hover {
-        background-color: black;
+        background-color: lightslategray;
     }
 
 
@@ -153,7 +153,7 @@
             padding: 0;
             background-color: #E3E2DF;
             overflow-x: hidden;
-            width: 60%;
+            width: 80%;
             text-align: center;
         }
 
