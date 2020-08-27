@@ -1,9 +1,13 @@
+    /*Everything under here is designet for window width lower than 950px.
+    This is not perfect for mobile view, but was the best setting for optimal 
+    page behaviour
+    */    
     body {
         margin: auto;
         padding: 0;
         background-color: #E3E2DF;
         overflow-x: hidden;
-        width: 80%;
+        width: 75%;
         text-align: center;
     }
 
@@ -103,18 +107,57 @@
 
     .svg-text h4 {
         padding-left: 0px;
-        
+
     }
 
+    .headline {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        text-align: left;
+    }
 
+    .dokumentasjon {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+    }
 
+    .dokumentasjon p {
+        text-align: left;
+        font-weight: lighter;
+    }
+
+    .dokumentasjon h3 {
+        text-align: left;
+    }
+
+    /*Button is from: https://www.w3schools.com/tags/tag_button.asp*/
+    .dokumentasjon button {
+        border: none;
+        color: white;
+        background-color: #4CAF50;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .dokumentasjon button:hover {
+        background-color: lightslategray;
+    }
+
+    /*Every CSS under here is specified when min-width of window is lower than 950px.
+    Resize window to see effect.
+    */
     @media only screen and (min-width: 950px) {
         body {
             margin: auto;
             padding: 0;
             background-color: #E3E2DF;
             overflow-x: hidden;
-            width: 70%;
+            width: 80%;
             text-align: center;
         }
 
@@ -129,10 +172,12 @@
         }
 
         .artist-info {
+            margin: auto;
             font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
-            text-align: start;
             padding-left: 1rem;
+            width: 90%;
+            justify-content: center;
         }
 
         .grid-container {
