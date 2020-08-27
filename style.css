@@ -1,3 +1,7 @@
+    /*Everything under here is designet for window width lower than 950px.
+    This is not perfect for mobile view, but was the best setting for optimal 
+    page behaviour
+    */    
     body {
         margin: auto;
         padding: 0;
@@ -126,7 +130,7 @@
         text-align: left;
     }
 
-
+    /*Button is from: https://www.w3schools.com/tags/tag_button.asp*/
     .dokumentasjon button {
         border: none;
         color: white;
@@ -144,9 +148,9 @@
         background-color: lightslategray;
     }
 
-
-
-
+    /*Every CSS under here is specified when min-width of window is lower than 950px.
+    Resize window to see effect.
+    */
     @media only screen and (min-width: 950px) {
         body {
             margin: auto;

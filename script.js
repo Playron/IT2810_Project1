@@ -1,6 +1,8 @@
+/*Making a Canvas element*/
 let canvas = document.getElementById("art1");
 let ctx = canvas.getContext("2d");
 
+/*Simple function that draw a Square. Simply lets me choose position and color*/
 function drawSquare(context, color, start, stop, squareX, squareY) {
     context.beginPath();
     context.moveTo(start, stop);
@@ -13,7 +15,7 @@ function drawSquare(context, color, start, stop, squareX, squareY) {
     context.closePath();
     context.stroke();
 }
-
+/*Function draws a random figure. This is fun to use when you don't want standard figures. */
 function drawRandomFigure(context, start, stop, x1, y1, x2, y2) {
     context.beginPath();
     context.moveTo(start, stop);
@@ -27,7 +29,7 @@ function drawRandomFigure(context, start, stop, x1, y1, x2, y2) {
     context.stroke();
 }
 
-
+/*Draws a circle with a color color. Also have to choose witch canvas you will draw it on */
 function drawCircle(context, color, centerX, centerY, radius) {
     context.beginPath();
     context.fillStyle = color;
@@ -43,7 +45,7 @@ function drawCircle2(context, color, centerX, centerY, radius) {
     context.closePath();
     context.fill();
 }
-
+/*Instead of using rect function i built my own. Lets me specify color and makes interactivity easier */
 function drawRectangle(context, color, start, stop, x, y) {
     context.beginPath();
     context.moveTo(start, stop);
@@ -55,9 +57,6 @@ function drawRectangle(context, color, start, stop, x, y) {
     context.fill();
     context.stroke();
 }
-
-let startX = 116;
-let startY = 35;
 
 function drawTriangle(context, color, startX, startY, x, y) {
     context.beginPath();
@@ -75,11 +74,8 @@ function drawArc(context, color, startX, startY, radius) {
     context.arc(startX, startY, 70, 0, Math.PI, false);
     context.moveTo(startX + 70, startY);
     context.ellipse(startX, startY, 70, 35, 0, 0, Math.PI);
-    //context.closePath();
     context.fillStyle = color;
-    //context.fill();
     context.stroke();
-
 }
 
 //Function that creates a random rgb color using the Math.random function.
@@ -102,13 +98,15 @@ drawCircle(ctx, "#41B3A3", 100, 200, 50);
 
 //Make the canvas interactive. Simply change all color to a random color, and change size of the circle.
 //The rectangle is duplicating itself to add a color stack.
+let startX = 116;
+let startY = 35;
 let circleRadius = 35;
 let rectStartX = 116;
 let rectStartY = 58;
 let rectX = 116;
 let rectY = 232;
 
-
+/*EventListener that will change the canvas image by clicking on it*/
 $(document).ready(function () {
     $('#art1').on('click', function () {
         drawRectangle(ctx, randomColorSelector(), rectStartX, rectStartY, rectX, rectY);
@@ -117,7 +115,9 @@ $(document).ready(function () {
         drawSquare(ctx, randomColorSelector(), 200, 35, 75, 75);
         drawCircle(ctx, randomColorSelector(), 237, 200, circleRadius);
         drawCircle(ctx, randomColorSelector(), 100, 200, 50);
-        //drawArc(ctx,"blue", 175, 220);
+        /*The code from here will change the appearance of teh canvas-figures.
+        This values can be changed to change the interactivity effect.
+        */
         circleRadius += 4;
         rectStartX -= 2;
         rectStartY += 4;
@@ -134,7 +134,7 @@ $(document).ready(function () {
         }
     });
 });
-
+/*Listens to SVG-window and change all colors if clicked*/
 $(document).ready(function () {
     $('#svg-art').on('click', function () {
         $svg = $("#svg-art");
@@ -147,6 +147,7 @@ $(document).ready(function () {
     });
 });
 
+/*Function that make it possible to show or hide documentation*/
 let show = "less";
 $(document).ready(function () {
     $("#show-more").hide();
