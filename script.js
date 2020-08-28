@@ -128,10 +128,10 @@ $(document).ready(function () {
         drawCircle(ctx, randomColorSelector(), 100, 200, 50);
         draw(ctx);
         i++;
-        /*The code from here will change the appearance of teh canvas-figures.
+        /*
+        The code from here will change the appearance of teh canvas-figures.
         This values can be changed to change the interactivity effect.
-        */
-        /*circleRadius += 4;
+        circleRadius += 4;
         rectStartX -= 2;
         rectStartY += 4;
         rectX += 2;
@@ -147,6 +147,18 @@ $(document).ready(function () {
         }*/
     });
 });
+
+$(document).ready(function () {
+    $('#art1').mouseover(function () {
+        drawRectangle(ctx, randomColorSelector(), rectStartX, rectStartY, rectX, rectY);
+        drawTriangle(ctx, randomColorSelector(), 175, 290, 58, 55);
+        drawTriangle(ctx, randomColorSelector(), startX, startY, -50, 70);
+        drawSquare(ctx, randomColorSelector(), 200, 35, 75, 75);
+        drawCircle(ctx, randomColorSelector(), 237, 200, circleRadius);
+        drawCircle(ctx, randomColorSelector(), 100, 200, 50);
+    });
+});
+
 /*Listens to SVG-window and change all colors if clicked*/
 $(document).ready(function () {
     $('#svg-art').on('click', function () {
@@ -179,19 +191,34 @@ $(document).ready(function () {
 });
 
 
+
+/*Help function that lets me controll the disco light on the figures.*/
 let i = 0;
 let id;
 
-function draw(context) {
-    id = requestAnimationFrame(draw);
+function discoFigure() {
     drawRectangle(ctx, randomColorSelector(), rectStartX, rectStartY, rectX, rectY);
     drawTriangle(ctx, randomColorSelector(), triangleX, triangleY, 58, 55);
     drawTriangle(ctx, randomColorSelector(), triangle2X, triangle2Y, -50, 70);
     drawSquare(ctx, randomColorSelector(), squareX, squareY, 75, 75);
     drawCircle(ctx, randomColorSelector(), circleX, circleY, 35);
     drawCircle(ctx, randomColorSelector(), circle2X, circle2Y, 50);
+}
+
+/*Animate function. This function is called when canvas is clicked on and has 7 states. This first 6 animates different figures, while 
+the last state stops all animation
+*/
+function draw(context) {
+    id = requestAnimationFrame(draw);
+    drawRectangle(ctx, "#EE4C7C", rectStartX, rectStartY, rectX, rectY);
+    drawTriangle(ctx, "#45A29E", triangleX, triangleY, 58, 55);
+    drawTriangle(ctx, "#8860D0", triangle2X, triangle2Y, -50, 70);
+    drawSquare(ctx, "#D79922", squareX, squareY, 75, 75);
+    drawCircle(ctx, "#C5CBE3", circleX, circleY, 35);
+    drawCircle(ctx, "#41B3A3", circle2X, circle2Y, 50);
     if (i == 1) {
         rectStartX -= 0.1;
+        discoFigure();
     }
     if (i == 2) {
         rectStartX += 0.1;
@@ -204,6 +231,7 @@ function draw(context) {
         triangleY += 0.1;
         circleY -= 0.1;
         circleX -= 0.1;
+        discoFigure();
     }
     if (i == 4) {
         rectStartX -= 0.1;
@@ -223,21 +251,16 @@ function draw(context) {
         circle2Y -= 0.1;
         triangle2X -= 0.5;
         triangle2Y += 0.5;
+        discoFigure();
     }
-    if (i == 8) {
+    if (i == 6) {
         i = 0;
         cancelAnimationFrame(id);
     }
 }
-
+/*This function resets the canvas when the mousepointer leaves the view*/
 $(document).ready(function () {
     $('#art1').mouseleave(function () {
-        drawRectangle(ctx, randomColorSelector(), rectStartX, rectStartY, rectX, rectY);
-        drawTriangle(ctx, randomColorSelector(), triangleX, triangleY, 58, 55);
-        drawTriangle(ctx, randomColorSelector(), 116, 35, -50, 70);
-        drawSquare(ctx, randomColorSelector(), 200, 35, 75, 75);
-        drawCircle(ctx, randomColorSelector(), circleX, circleY, 35);
-        drawCircle(ctx, randomColorSelector(), circle2X, circle2Y, 50);
         startX = 116;
         startY = 35;
         circleRadius = 35;
@@ -255,10 +278,6 @@ $(document).ready(function () {
         squareY = 35;
         triangle2X = 116;
         triangle2Y = 35;
-        for (let j = 0; j <= 7; j++) {
-            if (j == i) {
-                cancelAnimationFrame(id);
-            }
-        }
+        i = 0;
     });
 });
