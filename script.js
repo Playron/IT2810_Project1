@@ -216,6 +216,8 @@ function draw(context) {
     drawSquare(ctx, "#D79922", squareX, squareY, 75, 75);
     drawCircle(ctx, "#C5CBE3", circleX, circleY, 35);
     drawCircle(ctx, "#41B3A3", circle2X, circle2Y, 50);
+    if(i == 0){
+    }
     if (i == 1) {
         rectStartX -= 0.1;
         discoFigure();
@@ -256,6 +258,8 @@ function draw(context) {
     if (i == 6) {
         i = 0;
         cancelAnimationFrame(id);
+        ctx.clearRect(0, 0, 350, 350);
+        
     }
 }
 /*This function resets the canvas when the mousepointer leaves the view*/
@@ -279,5 +283,7 @@ $(document).ready(function () {
         triangle2X = 116;
         triangle2Y = 35;
         i = 0;
+        ctx.clearRect(0,0,350,350);
+        discoFigure();
     });
 });
